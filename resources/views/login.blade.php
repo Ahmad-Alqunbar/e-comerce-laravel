@@ -1,9 +1,10 @@
 @extends('master')
+
 @section('contant')
 <div class="container custom-login">
     <div class="row">
         <div class="col-sm-4 mx-auto">
-<form method="post" action="{{url('/login')}}">
+<form method="post" action="{{url('login')}}">
     @csrf
     <div class="form-group ">
       <label for="exampleInputEmail1">Email address</label>
