@@ -11,7 +11,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js"></script>
+
+
+
+
 </head>
 <body>
 {{View::make('header')}}
@@ -57,17 +62,17 @@ img.slider-img{
 .searched-item{
     margin:30px;
 }
+.cart-list-devider{
+    border-bottom:1px solid #ccc;
+    margin-bottom:20px;
+    padding-bottom:20px;
+}
+
 </style>
 <script>
-    $('.resizableImage').mouseenter(function() {
-    $(this).stop().animate({ width: "+=30%", height: "+=30%" });
-});
+    $(document).ready(function(){
+        $('#zoom_01').ezPlus();
+    })
 
-$('body').mouseleave(function() {
-    var x = $(this).attr('width'),
-        y = $(this).attr('height');
-
-    $(this).stop().animate({ width: x, height: y });
-});
-    </script>
+</script>
 </html>

@@ -18,7 +18,7 @@ if(Session::has('user')){
           <a class=" nav-link text-white" href="{{url('/')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Orders</a>
+          <a class="nav-link text-white" href="{{url('myorders')}}">Orders</a>
         </li>
 
           <form action="{{url('/search')}}" method=""class="form-inline my-2 my-lg-0">
@@ -30,7 +30,7 @@ if(Session::has('user')){
 <ul class="navbar-nav ">
 
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">Cart({{$total}})</a>
+        <a class="nav-link text-white" href="{{url('cartList')}}">Cart({{$total}})</a>
       </li>
       @if (Session::has('user'))
 
@@ -45,6 +45,7 @@ if(Session::has('user')){
 
     @else
    <li> <a class="nav-link text-white" href="{{url('/login')}}">Login</a></li>
+   <li> <a class="nav-link text-white" href="{{url('/register')}}">Register</a></li>
     @endif
 </ul>
 
